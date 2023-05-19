@@ -1,0 +1,28 @@
+.ReviewSwiper{
+    width: 55rem;
+
+}
+.swiper-slide{
+    width: fit-content !important;
+}
+
+
+@media (max-width:768px) {
+    .swiper-button-next{
+        left: 36rem !important;
+    }
+    .swiper-button-prev{
+        left: 18rem !important;
+    }
+    /* .swiper-wrapper{
+        margin-left: -2rem;
+    } */
+}
+@media (min-width:768px){
+    .swiper-button-next{
+        left: 53rem !important;
+    }
+    .swiper-button-prev{
+        left: 0 !important;
+    }
+}

@@ -1,0 +1,17 @@
+
+@media (max-width:768px) {
+    .homeBest{
+        height: 694px;
+        background-image: url("HomeBest.png");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+@media (min-width:768px){
+    .homeBest{
+        height: 720px;
+        background-image: url("HomeBestLg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
