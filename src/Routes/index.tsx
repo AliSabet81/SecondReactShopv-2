@@ -3,6 +3,9 @@ import Layout from "../layouts";
 import HomeScreen from "../screens/home";
 import ShopAllScreen from "../screens/shop";
 import CategoryPage from "../screens/category";
+import RegisterScreen from "../screens/auth/register";
+import LoginScreen from "../screens/auth/login";
+import AuthScreen from "../screens/auth";
 export type TChildren = {
     name : string,
     path  : string,
@@ -16,7 +19,11 @@ export type RouteType = {
 }
 
 export const ROUTES = {
-    Home:"/home",
+    Home:"/",
+
+    Auth:"/auth",
+    Login:"/auth/login",
+    Register:"/auth/Register",
 
     ShopAll:"/shopAll",
 
@@ -59,7 +66,7 @@ export const Router = createBrowserRouter([
         children:[
             {
                 path:ROUTES.Home,
-                element:<HomeScreen/>
+                element:<HomeScreen/>,
             },
             {
                 path:ROUTES.ShopAll,
@@ -74,43 +81,69 @@ export const Router = createBrowserRouter([
                         element:<CategoryPage name={"Edible"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
                     },
                     {
-                        path:ROUTES.Concentrates
+                        path:ROUTES.Concentrates,
+                        element:<CategoryPage name={"Concentrates"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
+
                     },
                     {
-                        path:ROUTES.Mushrooms
+                        path:ROUTES.Mushrooms,
+                        element:<CategoryPage name={"Mushrooms"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
+
                     },
                     {
-                        path:ROUTES.Promotions
+                        path:ROUTES.Promotions,
+                        element:<CategoryPage name={"Promotions"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
+
                     },
                     {
-                        path:ROUTES.Indica
+                        path:ROUTES.Indica,
+                        element:<CategoryPage name={"Indica"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
+
                     },
                     {
-                        path:ROUTES.Hybrid
+                        path:ROUTES.Hybrid,
+                        element:<CategoryPage name={"Hybrid"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
+
                     },
                     {
-                        path:ROUTES.Sativa
+                        path:ROUTES.Sativa,
+                        element:<CategoryPage name={"Sativa"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
+
                     },
                     {
-                        path:ROUTES.AAAAWeed
+                        path:ROUTES.AAAAWeed,
+                        element:<CategoryPage name={"AAAAWeed"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
+
                     },
                     {
-                        path:ROUTES.Shake
+                        path:ROUTES.Shake,
+                        element:<CategoryPage name={"Shake"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
+
                     },
                     {
-                        path:ROUTES.Diamonds
+                        path:ROUTES.Diamonds,
+                        element:<CategoryPage name={"Diamonds"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
+
                     },
                     {
-                        path:ROUTES.Shatter
+                        path:ROUTES.Shatter,
+                        element:<CategoryPage name={"Shatter"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
+
                     },
                     {
-                        path:ROUTES.Budder
+                        path:ROUTES.Budder,
+                        element:<CategoryPage name={"Budder"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
+
                     },
                     {
-                        path:ROUTES.Hash
+                        path:ROUTES.Hash,
+                        element:<CategoryPage name={"Hash"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
+
                     },
                     {
-                        path:ROUTES.Wholesale
+                        path:ROUTES.Wholesale,
+                        element:<CategoryPage name={"Wholesale"} desc={"Here at WestCoastSupply’s “ cannabis section, we showcase the best Indica, Hybrid, and Sativa medical cannabis strain selections at the best prices online. You can be assured that all our strains go through a strict screening process to ensure that all your cannabis needs are top-quality. All of our flowers are sourced from reputable growers, based in British Columbia, Canada. We have hige grade selection comes from growers that produce AAAA+ quality cannabis flowers and have many years of experience in the cannabis industry. You are guaranteed to be receiving high-quality flowers at the best prices online with our unbeatable sales!"}/>
+
                     },
                     
                 ]
@@ -134,7 +167,22 @@ export const Router = createBrowserRouter([
                         path:ROUTES.Blog
                     },
                 ]
-            }
+            },
+            {
+                path:ROUTES.Auth,
+                element:<AuthScreen/>,
+                children:[
+                    {
+                       path:ROUTES.Register,
+                        element:<RegisterScreen/>
+                    },
+                    {
+                        path:ROUTES.Login,
+                        element:<LoginScreen/>
+                    } 
+                ]
+            },
+            
         ]
     },
 ])

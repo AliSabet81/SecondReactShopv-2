@@ -17,7 +17,7 @@ const CategoryPage = (e:ICategoryPage) => {
             </div>
             <TopSelling/>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                {Products.filter((e)=>e.discount).map((i)=><ProductCard img={i.img} title={i.title} score={i.score} reviews={i.reviews} price={i.price} variant={i.variant} category={e.name}/>)}
+                {Products.filter((e)=>e.discount).map((i)=><ProductCard key={i.index} img={i.img} title={i.title} score={i.score} reviews={i.reviews} price={i.price} variant={i.variant} category={e.name}/>)}
             </div>
         </div>
      );

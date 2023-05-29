@@ -1,5 +1,6 @@
 import Button from "../button";
 import "./index.css"
+import SearchIcon from '@mui/icons-material/Search';
 
 const TextField = ({variant}:{variant : "search" | "email"}) => {
     switch (variant) {
@@ -7,7 +8,7 @@ const TextField = ({variant}:{variant : "search" | "email"}) => {
             return ( 
                 <div  className="w-456 flex gap-2 h-12">
                     <input className="w-96 h-12 rounded-full outline-none border py-3 px-6 border-F4F4F4 placeholder:text-C8C9CB" placeholder="Search" type="text" />
-                    <Button className="w-12"></Button>
+                    <Button className="w-12"><SearchIcon/></Button>
                 </div>
              );
         case "email" :

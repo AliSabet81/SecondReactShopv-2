@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import OffTimer from "./timer";
 import SubMenu from "./submenu";
-import { menuRoutes } from "../../Routes";
+import { ROUTES, menuRoutes } from "../../Routes";
 import TextField from "../../components/textField";
 const Header = () => {
     const Filter = () => {
@@ -19,9 +19,9 @@ const Header = () => {
                     <Link to={"/"}><img src="Logo.png" alt="" /></Link>
                     <div className="justify-self-center"><TextField variant={"search"}/></div>
                     <div className="h-6 flex gap-6 items-center justify-self-end">
-                        <button className="text-sm font-normal">Your Account</button>
+                        <Link className="text-sm font-normal" to={ROUTES.Login}>Your Account</Link>
                         <span className="border h-3 border-C8C9CB"></span>
-                        <button><LocalMallIcon/></button>
+                        <Link to={ROUTES.Login}><LocalMallIcon/></Link>
                     </div>
                 </div>
                 <div className="px-44 flex gap-8 border-y justify-center items-center border-y-F4F4F4">
